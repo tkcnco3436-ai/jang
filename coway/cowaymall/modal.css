@@ -1,0 +1,87 @@
+/*
+ * goodlife.cowaymall.co.kr '제품 상담 신청서' 모달(.cta-popup-noProduct) 원본 스타일.
+ * 2026-11-19 사이트의 reset_style.css 등에서 이 모달에 적용되는 규칙만 그대로 옮겼다.
+ * 페이지의 다른 요소에 번지지 않도록 기본(reset) 규칙만 .cta-popup-noProduct 아래로 묶었고,
+ * 이미지·폰트 경로를 이 폴더로 바꿨다. 값은 바꾸지 않았다.
+ * 예외 1곳: 원본은 PC 전용(폭 640px 고정)이라 화면이 좁을 때만 폭을 화면에 맞춘다(맨 아래 @media).
+ */
+@font-face{font-family:HanSans;font-weight:400;font-style:normal;src:url("SpoqaHanSansNeo-Regular.woff2") format("woff2")}
+@font-face{font-family:HanSans;font-weight:500;font-style:normal;src:url("SpoqaHanSansNeo-Medium.woff2") format("woff2")}
+@font-face{font-family:HanSans;font-weight:700;font-style:normal;src:url("SpoqaHanSansNeo-Bold.woff2") format("woff2")}
+
+/* reset (원본 공통 규칙 · 모달 안으로 한정) */
+.cta-popup-noProduct,.cta-popup-noProduct *{margin:0;padding:0;box-sizing:border-box}
+.cta-popup-noProduct *::after,.cta-popup-noProduct *::before{box-sizing:border-box}
+.cta-popup-noProduct section{display:block}
+.cta-popup-noProduct ul,.cta-popup-noProduct li{list-style:none}
+.cta-popup-noProduct label,.cta-popup-noProduct input,.cta-popup-noProduct button,.cta-popup-noProduct select,.cta-popup-noProduct img{vertical-align:middle}
+.cta-popup-noProduct p{word-break:break-all}
+.cta-popup-noProduct,.cta-popup-noProduct input,.cta-popup-noProduct select,.cta-popup-noProduct button{font-family:HanSans,AppleSDGothicNeo-Regular,"Malgun Gothic","맑은 고딕",dotum,돋움,sans-serif;color:rgb(27,37,41);font-size:13px;line-height:1.5}
+.cta-popup-noProduct button{border:0;cursor:pointer;background:none}
+.cta-popup-noProduct img{display:block;width:auto;max-width:100%;border:0}
+.cta-popup-noProduct .ir_pm{display:block;overflow:hidden;font-size:0;line-height:0;text-indent:-9999px}
+.cta-popup-noProduct input{background-image:none}
+.cta-popup-noProduct input[type=text],.cta-popup-noProduct input[type=tel]{appearance:none;border-radius:0;transition:.3s ease-in-out;outline:none}
+.cta-popup-noProduct input[type=text]:focus,.cta-popup-noProduct input[type=tel]:focus,.cta-popup-noProduct select:focus{box-shadow:rgb(158,212,255) 0 0 5px;border:1px solid rgb(85,138,183)!important}
+
+/* 모달 (원본 규칙 그대로) */
+.shadow{position:absolute;top:0;left:0;width:100%;height:100vh;background:rgba(27,37,41,.4);display:none}
+.footer-common-popup{display:none;position:relative;z-index:9999}
+.footer-common-popup .common-terms-box{position:fixed;z-index:9999;top:60px;left:50%;transform:translateX(-50%);background:#fff;width:640px;padding:0 30px 45px;border-radius:4px}
+.footer-common-popup .common-terms-box .cross-icons{width:18px;height:18px;background:url("close_view_modal.png");cursor:pointer;position:absolute;right:30px;top:20px}
+.footer-common-popup .common-terms-box .title{text-align:center;font-size:19px;font-weight:700;color:rgb(27,37,41);line-height:64px}
+.footer-common-popup .shadow{display:block;z-index:9000;position:fixed;background:rgba(0,0,0,.7)}
+.cta-popup .common-terms-box{padding:0}
+.cta-popup .cta-main-box{max-height:calc(-184px + 100vh);overflow-y:auto;padding:45px 30px}
+.cta-popup .grey-box{padding:12px 16px 6px 18px;border-radius:4px;background:rgb(242,244,245)}
+.cta-popup .cta-submit-form .mini-tit{font-size:23px;font-weight:700;line-height:32px;margin-bottom:15px}
+.cta-popup .cta-submit-form .input-box{margin-bottom:10px;height:86px;box-sizing:border-box;border:2px solid rgb(242,244,245)}
+.cta-popup .cta-submit-form .input-box.active{background:#fff;border:2px solid rgb(27,37,41)}
+.cta-popup .cta-submit-form .input-box .label{color:rgb(144,160,166);font-size:14px;position:relative;padding-right:7px;display:inline-block;margin-bottom:5px}
+.cta-popup .cta-submit-form .input-box .label.require::after{content:"";position:absolute;right:0;top:3px;width:3px;height:3px;background:rgb(0,168,227);border-radius:50%}
+.cta-popup .cta-submit-form .input-box .inputs{background:none;outline:0;font-size:17px;height:40px;width:100%;box-shadow:none!important;border:none!important}
+.cta-popup .cta-submit-form .input-box .inputs::placeholder{color:rgb(190,200,204)}
+.cta-popup .cta-submit-form .input-box .call-wrap{display:flex;align-items:center}
+.cta-popup .cta-submit-form .input-box .call-wrap .input-call-01{border:none;background:none;font-size:17px;height:40px;width:55px;outline:0;margin-right:7px}
+.cta-popup .cta-submit-form .input-box .call-wrap .input-call-02{width:46px}
+.cta-popup .cta-submit-form .input-box .call-wrap .input-call-03{width:46px;margin-left:4px}
+.cta-popup .cta-submit-form .input-box .call-wrap .dash{display:inline-block;height:40px;line-height:40px;font-size:21px}
+.cta-popup .cta-submit-form .agree-terms-box{padding:13px 10px 0;border:1px solid rgb(242,244,245);border-radius:4px;margin-top:45px}
+.cta-popup .cta-submit-form .agree-terms-box.open{border:2px solid rgb(0,167,225)}
+.cta-popup .cta-submit-form .agree-terms-box .top-line{display:flex;padding-bottom:10px;justify-content:space-between;align-items:center}
+.cta-popup .cta-submit-form .agree-terms-box .top-line input[type=checkbox]{display:none}
+.cta-popup .cta-submit-form .agree-terms-box .top-line input[type=checkbox]+label{font-size:16px;color:rgb(144,160,166);cursor:pointer;display:inline-block;height:27px;line-height:27px;padding-left:40px;background:url("terms_off.png") 0 0/27px 27px no-repeat}
+.cta-popup .cta-submit-form .agree-terms-box .top-line input[type=checkbox]+label .require-txt{color:rgb(0,168,227);padding-left:3px}
+.cta-popup .cta-submit-form .agree-terms-box .top-line input[type=checkbox]:checked+label{background:url("terms_on.png") 0 0/27px 27px no-repeat;color:rgb(27,37,41)}
+.cta-popup .cta-submit-form .agree-terms-box .terms-con-arrow{width:11px;height:7px;background:url("arrow_down_gray.png");cursor:pointer;margin-right:10px}
+.cta-popup .cta-submit-form .agree-terms-box .terms-con-arrow.active{background:url("arrow_up_gray.png")}
+.cta-popup .cta-submit-form .agree-terms-box .terms-list{padding:18px 9px 5px 16px;display:none;border-top:1px solid rgb(242,244,245);margin:0 -10px}
+.cta-popup .cta-submit-form .agree-terms-box .terms-list li{font-size:14px;line-height:1.7;color:rgb(190,200,204)}
+.cta-popup .cta-submit-form .submit-btn{min-width:180px;height:54px;line-height:54px;padding:0 15px;font-size:16px;display:block;margin:60px auto 0;color:#fff;background:rgb(190,200,204);border:1px solid rgb(190,200,204);cursor:not-allowed;border-radius:4px;transition:.5s}
+.cta-popup .cta-submit-form .submit-btn.click-possible{background:rgb(27,37,41);border:1px solid rgb(54,68,73);cursor:pointer}
+.cta-popup-noProduct .coway-expert-content{display:flex;align-items:center;margin-bottom:40px;margin-top:30px;padding:18px 20px}
+.cta-popup-noProduct .coway-expert-content .mark-img{margin-right:20px}
+.cta-popup-noProduct .coway-expert-content .text .text-1{display:block;color:rgb(144,160,166);font-size:14px;line-height:1.5}
+.cta-popup-noProduct .coway-expert-content .text .text-2{font-size:17px;font-weight:700;line-height:1.4}
+.cta-popup-noProduct .custom-checkbox{display:none}
+.cta-popup-noProduct .custom-label{display:inline-flex;align-items:center;cursor:pointer;font-size:16px;margin-right:15px}
+.cta-popup-noProduct .custom-box{width:20px;height:20px;border:2px solid #ccc;border-radius:20px;margin-right:5px;display:flex;align-items:center;justify-content:center;transition:.2s}
+.cta-popup-noProduct .custom-checkbox:checked+.custom-label .custom-box{background-color:rgb(7,167,227);border-color:rgb(7,167,227);color:#fff}
+.cta-popup-noProduct .custom-box::after{content:"✓";font-size:14px;font-weight:700;display:none}
+.cta-popup-noProduct .custom-checkbox:checked+.custom-label .custom-box::after{display:block}
+
+/* 접수 결과 안내 (원본은 접수 후 /content/complete02 페이지로 이동 — 이 샘플은 같은 모달 안에서 안내) */
+.cta-popup-noProduct .form-msg{margin-top:14px;text-align:center;font-size:14px;color:#E5000F;min-height:20px}
+.cta-popup-noProduct .complete-box{display:none;text-align:center;padding:30px 0 10px}
+.cta-popup-noProduct .complete-box .t1{font-size:23px;font-weight:700;line-height:32px}
+.cta-popup-noProduct .complete-box .t2{margin-top:12px;font-size:16px;color:rgb(144,160,166);line-height:1.6}
+.cta-popup-noProduct .complete-box button{margin:40px auto 0;display:block;min-width:180px;height:54px;border-radius:4px;background:rgb(27,37,41);color:#fff;font-size:16px}
+
+/* 예외: 좁은 화면에서만 폭을 화면에 맞춤 (원본은 PC 640px 고정) */
+@media (max-width:660px){
+  .footer-common-popup .common-terms-box{width:calc(100% - 20px);top:20px}
+  .cta-popup .cta-main-box{max-height:calc(100vh - 104px);padding:30px 18px}
+  .cta-popup .cta-submit-form .input-box .label{font-size:13px}
+  .cta-popup-noProduct .custom-label{margin-right:10px;font-size:15px}
+  .cta-popup-noProduct .coway-expert-content .text .text-2{font-size:15px}
+}

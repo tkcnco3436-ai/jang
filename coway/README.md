@@ -8,7 +8,8 @@ growthground.kr/coway 구성을 참고한 장팀장렌탈 정수기 렌탈 랜�
 | 사은품 | goodlife.cowaymall.co.kr/content/eventGift (BEST 사은품 12종) |
 | FAQ | growthground 동작과 동일 — 한 번에 하나만 펼침, `+` 45° 회전 |
 | 맞춤형 견적 보기 | cowaymall '원하는 제품 찾기' 선택지·메모 문장 + good.cowaygoodlife.kr 톤 |
-| 상담 모달 | cowaymall '제품 상담 신청서'(cta-popup-noProduct)와 같은 입력·검증 |
+| 상담 모달 | cowaymall '제품 상담 신청서'(cta-popup-noProduct) 마크업·CSS·아이콘·폰트 그대로 (`cowaymall/`). 좁은 화면에서만 폭을 화면에 맞춤 |
+| 제휴카드 혜택 | goodlife.cowaymall.co.kr/content/eventCard 본문 이미지를 모달로 표시 |
 | 푸터 | good.cowaygoodlife.kr 사업자 정보 |
 
 ## 상담 접수 흐름
