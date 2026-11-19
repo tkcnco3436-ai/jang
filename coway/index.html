@@ -31,42 +31,38 @@ a{color:inherit}
 /* 01 header */
 .hd{height:52px;display:flex;align-items:center;padding:0 16px;background:#fff;position:sticky;top:0;z-index:20;border-bottom:1px solid #F0F3F8}
 .hd img{height:30px;width:auto}
-.hd .call{margin-left:auto;font-size:13px;font-weight:700;color:var(--primary);background:var(--primary-weak);padding:8px 12px;border-radius:10px;text-decoration:none}
 
 /* 02 hero */
-.hero{position:relative;padding:44px 0 28px;background:linear-gradient(180deg,#9FCBF6 0%,#CFE5FB 46%,#EEF6FF 72%,#E3ECF5 100%);overflow:hidden}
+.hero{position:relative;padding:40px 0 28px;background:linear-gradient(180deg,#9FCBF6 0%,#CFE5FB 46%,#EEF6FF 72%,#E3ECF5 100%);overflow:hidden}
 .hero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 18% 12%,rgba(255,255,255,.7),transparent 40%),radial-gradient(circle at 85% 30%,rgba(255,255,255,.55),transparent 35%)}
 .hero>*{position:relative}
 .hero .brand{font-size:15px;font-weight:700;color:#24427A;text-align:center}
-.hero h1{margin-top:8px;text-align:center;font-weight:900;font-size:40px;line-height:1.15;color:var(--navy);letter-spacing:-0.05em}
+.hero h1{margin-top:0;text-align:center;font-weight:900;font-size:40px;line-height:1.15;color:var(--navy);letter-spacing:-0.05em}
 .hero h1 span{color:#2F6BE0}
-.slogan{margin:18px auto 0;width:max-content;max-width:92%;transform:rotate(-3deg);background:linear-gradient(90deg,#3E8EF0,#2B4FD8);color:#fff;font-weight:900;font-size:38px;line-height:1.2;padding:12px 22px;border-radius:18px;box-shadow:0 12px 26px rgba(43,79,216,.35);letter-spacing:-0.05em}
+.slogan{margin:18px auto 0;width:max-content;max-width:92%;transform:rotate(-3deg);background:linear-gradient(90deg,#3E8EF0,#2B4FD8);color:#fff;font-weight:900;font-size:34px;line-height:1.2;padding:12px 22px;white-space:nowrap;border-radius:18px;box-shadow:0 12px 26px rgba(43,79,216,.35);letter-spacing:-0.05em}
 .slogan b{color:#FFE15A}
-.hero .note{margin-top:16px;text-align:center;font-size:12px;color:#3A4A66;padding:0 24px;line-height:1.5}
-/* growthground 히어로처럼: 3대를 왼쪽 앞에서 오른쪽 뒤로 계단식으로 세우고, 흰 대리석 받침 위에 둔다 */
-.lineup{position:relative;height:340px;margin-top:22px}
-.lineup .ledge{position:absolute;left:0;right:0;bottom:0;height:112px;background:linear-gradient(180deg,#FFFFFF 0,#F1F4F8 14%,#DDE3EA 100%);box-shadow:0 -1px 0 #fff,inset 0 10px 18px rgba(255,255,255,.9)}
-.lineup .ledge:before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:linear-gradient(90deg,rgba(255,255,255,.4),#fff,rgba(255,255,255,.4))}
-.lineup img{position:absolute;filter:drop-shadow(0 16px 14px rgba(20,40,80,.22))}
-.lineup .i1{left:5%;bottom:58px;height:262px;z-index:3}
-.lineup .i2{left:35%;bottom:80px;height:236px;z-index:2}
-.lineup .i3{left:61%;bottom:100px;height:212px;z-index:1}
-.lineup .best{position:absolute;right:16px;bottom:78px;width:100px;height:100px;border-radius:50%;background:#fff;border:4px solid var(--sky);display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:900;color:var(--sky);font-size:13px;line-height:1.2;box-shadow:0 10px 20px rgba(62,142,240,.35);z-index:5}
-.lineup .best b{font-size:24px}
-.names{display:flex;gap:6px;overflow-x:auto;padding:12px 16px 0;scrollbar-width:none}
-.names::-webkit-scrollbar{display:none}
-.names span{flex:none;background:rgba(255,255,255,.9);border:1px solid #D5E2F3;border-radius:999px;font-size:12px;font-weight:700;color:#2B3B57;padding:6px 10px}
-.badges{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:16px 16px 0}
+/* 정수기 3종 쇼케이스: 가운데 대표 제품을 앞에, 양옆을 살짝 뒤로 두고 둥근 받침 위에 세운다 */
+.lineup{position:relative;height:330px;margin-top:26px}
+.lineup .glow{position:absolute;left:50%;top:6px;width:340px;height:300px;transform:translateX(-50%);border-radius:50%;background:radial-gradient(closest-side,rgba(255,255,255,.95),rgba(255,255,255,.55) 55%,rgba(255,255,255,0))}
+.lineup .stage{position:absolute;left:50%;bottom:22px;width:360px;max-width:92%;height:64px;transform:translateX(-50%);border-radius:50%;background:radial-gradient(ellipse at 50% 35%,#FFFFFF 0,#F3F7FC 45%,#DCE6F2 100%);box-shadow:0 18px 30px rgba(36,66,122,.18),inset 0 -6px 10px rgba(160,180,210,.35)}
+.lineup .stage:after{content:"";position:absolute;left:8%;right:8%;top:10px;height:2px;border-radius:2px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.95),transparent)}
+.lineup figure{position:absolute;bottom:46px;display:flex;flex-direction:column;align-items:center}
+.lineup figure img{height:100%;width:auto}
+.lineup figure:after{content:"";position:absolute;bottom:-8px;left:50%;width:78%;height:14px;transform:translateX(-50%);border-radius:50%;background:radial-gradient(closest-side,rgba(20,40,80,.32),rgba(20,40,80,0));z-index:-1}
+.lineup .c{left:50%;transform:translateX(-50%);height:252px;z-index:3}
+.lineup .l{right:calc(50% + 34px);height:196px;z-index:2;bottom:54px}
+.lineup .r{left:calc(50% + 34px);height:196px;z-index:2;bottom:54px}
+.lineup .l img,.lineup .r img{filter:saturate(.96) brightness(1.02)}
+.pnames{display:grid;grid-template-columns:1fr 1.15fr 1fr;gap:6px;padding:6px 16px 0;text-align:center}
+.pnames div{font-size:12px;color:#5B6B85;font-weight:600;line-height:1.35}
+.pnames b{display:block;font-size:14px;color:var(--navy);font-weight:800;letter-spacing:-0.02em}
+.pnames .main b{color:#2F6BE0}
+.badges{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;padding:18px 16px 0}
 .badges div{background:rgba(255,255,255,.92);border-radius:16px;padding:12px 6px;text-align:center;box-shadow:0 6px 14px rgba(20,40,80,.08)}
 .badges small{display:block;font-size:13px;color:#6B7A90;font-weight:600}
 .badges strong{display:block;margin-top:2px;font-size:17px;font-weight:900;color:var(--navy)}
+.hero .note{margin-top:14px;text-align:center;font-size:12px;color:#3A4A66;padding:0 24px;line-height:1.5}
 
-/* 03 event */
-.event{background:var(--navy);color:#fff;padding:28px 24px;display:flex;align-items:center;gap:12px}
-.event h3{font-size:22px;font-weight:900;line-height:1.35}
-.event h3 em{font-style:normal;color:#FFE15A}
-.event p{margin-top:8px;font-size:12px;color:#9AA4B8}
-.event .ico{margin-left:auto;flex:none;width:96px;height:96px;border-radius:20px;background:radial-gradient(circle at 50% 40%,#FF6B57,#B3121B 70%);display:flex;align-items:center;justify-content:center;font-size:44px;box-shadow:0 0 40px rgba(255,80,60,.55)}
 
 /* 04 benefits */
 .benefit{background:linear-gradient(180deg,var(--sky-2),var(--sky));padding:56px 24px 48px}
@@ -96,7 +92,9 @@ a{color:inherit}
 .pcard dd{text-align:right;font-weight:700}
 .pcard dd.strike{color:#9AA4B8;font-weight:400;text-decoration:line-through}
 .pcard .card-price{grid-column:1/-1;border-top:1px solid var(--line);margin-top:4px;padding-top:10px;display:flex;justify-content:space-between;align-items:baseline;color:var(--sky)}
-.pcard .card-price b{font-size:22px;font-weight:900}
+.pcard .card-price{flex-wrap:wrap;column-gap:8px}
+.pcard .card-price span{font-size:14px;font-weight:700}
+.pcard .card-price b{margin-left:auto;font-size:22px;font-weight:900;white-space:nowrap;letter-spacing:-0.02em}
 .btn{display:flex;align-items:center;justify-content:center;width:100%;height:60px;border-radius:14px;font-size:19px;font-weight:700;text-decoration:none}
 .btn.dark{background:#1B1C1F;color:var(--sky-2);margin-top:26px}
 .btn.line{background:#fff;color:var(--sky-2);border:2px solid var(--sky-2);margin-top:12px}
@@ -215,39 +213,29 @@ a{color:inherit}
   <!-- 01 헤더 -->
   <header class="hd">
     <img src="../assets/logo.png" alt="장팀장렌탈">
-    <a class="call" href="tel:010-7706-8935">전문가 상담 010-7706-8935</a>
   </header>
 
   <!-- 02 히어로: 카테고리별 베스트 정수기 5종 -->
   <section class="hero" aria-label="코웨이 정수기 렌탈">
-    <p class="brand">코웨이 더좋은 공식대리점 · 장팀장렌탈</p>
     <h1>코웨이 <span>정수기 렌탈</span></h1>
     <p class="slogan"><b>30만원</b> 받을 수 있는 곳</p>
-    <p class="note">*최대 30만원 · 실수령액은 3.3% 사업소득세 반영하여 지급되며, 제품·약정 조건에 따라 상담 시 안내합니다.</p>
     <div class="lineup" aria-hidden="true">
-      <div class="ledge"></div>
-      <img class="i1" src="img/products/p5.png" alt="">
-      <img class="i2" src="img/products/p2.png" alt="">
-      <img class="i3" src="img/products/p1.png" alt="">
-      <span class="best">정수기<b>BEST</b></span>
+      <div class="glow"></div>
+      <div class="stage"></div>
+      <figure class="l"><img src="img/products/p2.png" alt=""></figure>
+      <figure class="r"><img src="img/products/p1.png" alt=""></figure>
+      <figure class="c"><img src="img/products/p5.png" alt=""></figure>
     </div>
-    <div class="names" aria-label="베스트 정수기" style="justify-content:center">
-      <span>아이콘 프로 정수기</span><span>아이콘 정수기3</span><span>아이콘 정수기 2</span>
+    <div class="pnames" aria-label="베스트 정수기">
+      <div>냉·온·정수<b>아이콘 정수기3</b></div>
+      <div class="main">냉·온·정수<b>아이콘 프로 정수기</b></div>
+      <div>냉·온·정수<b>아이콘 정수기 2</b></div>
     </div>
     <div class="badges">
       <div><small>상담</small><strong>무료</strong></div>
-      <div><small>조건표</small><strong>먼저 안내</strong></div>
       <div><small>전국</small><strong>설치·관리</strong></div>
     </div>
-  </section>
-
-  <!-- 03 이벤트 띠 -->
-  <section class="event">
-    <div>
-      <h3>이번 달 정수기 혜택<br><em>상담 신청 접수 중!</em></h3>
-      <p>※ 현재 코웨이 고객은 약정 만기 후 신청 가능</p>
-    </div>
-    <div class="ico" aria-hidden="true">🚨</div>
+    <p class="note">*최대 30만원 · 실수령액은 3.3% 사업소득세 반영하여 지급되며, 제품·약정 조건에 따라 상담 시 안내합니다.</p>
   </section>
 
   <!-- 04 혜택 -->
@@ -459,10 +447,10 @@ const CONFIG = {
 /* 05 제품 카드 — goodlife.cowaymall.co.kr 카테고리별 베스트 > 정수기 (2026-11-19 확인값) */
 const PRODUCTS = [
   { rank:"BEST 01", id:"100004", img:"img/products/p1.png", name:"아이콘 정수기 2", tag:"프로모션 진행중", hash:["냉/온/정수"], rows:[["렌탈","월 29,900원","strike"],["프로모션","월 25,900원 ~"],["일시불 구매","1,140,000원"]], card:"월 10,900원 ~" },
-  { rank:"BEST 02", id:"100060", img:"img/products/p2.png", name:"아이콘 정수기3", tag:"프로모션 진행중", hash:["냉/온/정수"], rows:[["렌탈","월 30,900원","strike"],["프로모션","월 26,900원 ~"],["구매","1,190,000원"]] },
-  { rank:"BEST 03", id:"100053", img:"img/products/p3.png", name:"아이콘 얼음정수기 스탠다드", tag:"프로모션 진행중", hash:["얼음","냉/온/정수"], rows:[["렌탈","월 46,900원","strike"],["프로모션","월 41,900원 ~"],["구매","2,290,000원"]] },
-  { rank:"BEST 04", id:"100054", img:"img/products/p4.png", name:"아이콘 얼음정수기 미니", tag:"프로모션 진행중", hash:["얼음","냉/온/정수"], rows:[["렌탈","월 46,900원","strike"],["프로모션","월 40,900원 ~"],["구매","2,320,000원"]] },
-  { rank:"BEST 05", id:"100050", img:"img/products/p5.png", name:"아이콘 프로 정수기", tag:"프로모션 진행중", hash:["냉/온/정수"], rows:[["렌탈","월 34,900원","strike"],["프로모션","월 29,900원 ~"],["구매","1,400,000원"]] },
+  { rank:"BEST 02", id:"100060", img:"img/products/p2.png", name:"아이콘 정수기3", tag:"프로모션 진행중", hash:["냉/온/정수"], rows:[["렌탈","월 30,900원","strike"],["프로모션","월 26,900원 ~"],["일시불 구매","1,190,000원"]], card:"월 11,900원 ~" },
+  { rank:"BEST 03", id:"100053", img:"img/products/p3.png", name:"아이콘 얼음정수기 스탠다드", tag:"프로모션 진행중", hash:["얼음","냉/온/정수"], rows:[["렌탈","월 46,900원","strike"],["프로모션","월 41,900원 ~"],["일시불 구매","2,290,000원"]], card:"월 26,900원 ~" },
+  { rank:"BEST 04", id:"100054", img:"img/products/p4.png", name:"아이콘 얼음정수기 미니", tag:"프로모션 진행중", hash:["얼음","냉/온/정수"], rows:[["렌탈","월 46,900원","strike"],["프로모션","월 40,900원 ~"],["일시불 구매","2,320,000원"]], card:"월 25,900원 ~" },
+  { rank:"BEST 05", id:"100050", img:"img/products/p5.png", name:"아이콘 프로 정수기", tag:"프로모션 진행중", hash:["냉/온/정수"], rows:[["렌탈","월 34,900원","strike"],["프로모션","월 29,900원 ~"],["일시불 구매","1,400,000원"]], card:"월 14,900원 ~" },
 ];
 /* 06 사은품 — goodlife.cowaymall.co.kr/content/eventGift (BEST 사은품 중 12종) */
 const GIFTS = [
@@ -473,13 +461,13 @@ const GIFTS = [
 
 const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 document.getElementById("pcards").innerHTML = PRODUCTS.map(p => `
-  <a class="pcard" href="https://goodlife.cowaymall.co.kr/shop/${p.id}" target="_blank" rel="noopener">
+  <div class="pcard">
     <div class="l"><span class="rank">${p.rank}</span><img src="${p.img}" alt="${esc(p.name)}" loading="lazy"></div>
     <div class="r"><span class="tag">${esc(p.tag)}</span><h3>${esc(p.name)}</h3>
       <div class="hash">${p.hash.map(h => `<span>#${esc(h)}</span>`).join("")}</div>
       <dl>${p.rows.map(([k,v,c]) => `<dt>${k}</dt><dd class="${c||""}">${v}</dd>`).join("")}
         ${p.card ? `<div class="card-price"><span>제휴카드</span><b>${p.card}</b></div>` : ""}</dl>
-    </div></a>`).join("");
+    </div></div>`).join("");
 document.getElementById("ggrid").innerHTML = GIFTS.map(([f,n]) =>
   `<figure><img src="img/gifts/${f}.jpg" alt="${esc(n)}" loading="lazy"><figcaption>${esc(n)}</figcaption></figure>`).join("");
 
